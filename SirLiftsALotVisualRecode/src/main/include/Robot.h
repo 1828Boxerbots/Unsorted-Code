@@ -9,13 +9,16 @@
 
 #include <string>
 
-#include <frc/Joystick.h>
-#include <frc/ADXRS450_Gyro.h>                              
+#include <frc/XboxController.h>
+#include <frc/Talon.h>
 #include <frc/SampleRobot.h>
 #include <frc/drive/DifferentialDrive.h>
 #include <frc/smartdashboard/SendableChooser.h>
+#include <frc/DigitalInput.h>
+#include <frc/AnalogInput.h>
+#include <frc/interfaces/Potentiometer.h>
 
-/** 
+/**
  * This is a demo program showing the use of the DifferentialDrive class. The
  * SampleRobot class is the base of a robot application that will automatically
  * call your Autonomous and OperatorControl methods at the right time as
@@ -26,7 +29,9 @@
  * be much more difficult under this system. Use TimedRobot or Command-Based
  * instead if you're new.
  */
-class Robot : public frc::SampleRobot {
+using namespace frc;
+class Robot : public frc::SampleRobot 
+{
  public:
   Robot();
 
@@ -36,7 +41,20 @@ class Robot : public frc::SampleRobot {
   void Test() override;
 
  private:
-    frc::SPI port{frc::SPI::Port::kOnboardCS0};
-    
-    frc::ADXRS450_Gyro m_gyro{port};
+  // Robot drive system
+  Talon m_leftMotor{1};
+  Talon m_rightMotor{0};
+  DifferentialDrive m_robotDrive{m_leftMotor, m_rightMotor};
+
+  XboxController m_xbox{0};
+
+  Talon m_leftLeadScrew{2};
+  Talon m_rightLeadScrew{3};
+
+  Talon m_arm{4};
+
+  DigitalInput m_topLimit{7};
+  DigitalInput m_bottomLimit{6};
+
+  AnalogInput m_armPot{3};
 };
