@@ -1,0 +1,122 @@
+This is the master readme, any universally usefull information, like coding standard, or formatting rules, should go here. -B.E.S
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+	Naming Conventions:
+ 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+		Pointer: 
+			Lowercase "p" before name   
+---------------------------------------------------------------------------
+			Should have a functional name.
+    
+---------------------------------------------------------------------------
+		Command Groups: 
+			(name of function)CmdGrp
+    
+---------------------------------------------------------------------------	
+		Commands: 
+			(Name of command)CMD
+ 
+ 
+---------------------------------------------------------------------------     
+
+	Variable Naming Conventions:
+    
+		Local: 
+			m_(Variable name) : Camel Case
+    
+---------------------------------------------------------------------------	
+		Global: 
+			(Variabel name) : Camel case
+    
+---------------------------------------------------------------------------		
+		Classes: 
+			Pascal Case
+    
+---------------------------------------------------------------------------
+		Literalls: 
+			All caps
+
+---------------------------------------------------------------------------
+		Functions: 
+			Pascal Case
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+SUBSYSTEMS:
+    
+	
+
+	Climber:
+      
+		Hardware:
+			Solenoid[Ports:2]
+		Commands:
+			Climb
+---------------------------------------------------------------------------
+    
+	Gantry:
+      
+		Hardware:
+			2 Motors
+[Ports:1]
+
+			1 Encoder
+[Ports:1]
+
+          
+		Commands:
+			Move Up
+			Move Down
+---------------------------------------------------------------------------
+	Claw: 
+		Hardware:
+			2X Piston[Ports:4]
+			DIO[Ports:1]
+
+
+		Commands:
+			Close
+			Open
+			Grabbed?	
+          
+---------------------------------------------------------------------------
+	Wrist:
+          
+		Hardware:
+			Solenoid[Ports:2]
+
+		
+		Commands:
+     
+			Fulcrum full(FF)
+			Fulcrum Zero (FZ)
+---------------------------------------------------------------------------
+	DriveTrain:
+
+		Hardware:
+			4 motors[Ports:2]
+
+
+		Commands:
+			Drive
+---------------------------------------------------------------------------		
+	Visual:
+		Hardware:
+			Raspberry Pi 3V
+			Camera : Microsoft HD lifecam[Ports:1]
+
+
+		Commands:
+			Send Image
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+STEPS:
+	
+	1)Create a subsystem and define all code
+	2)Create pointer for each subsysyetem in robot.cpp and create a robot.h
+	3)Create a cmd/cmdgrp and define with code
+	4)Create user inputs in OI.cpp & OI.H
+	5)Update parts in RobotMap.h
+	6)Tie Everything together
