@@ -1,0 +1,13 @@
+See file:///C:/Users/1828%20BoxerBots/Desktop/KurganSampleRoboted/build/tmp/compileFrcUserProgramDebugExecutableFrcUserProgramCpp/output.txt for all output for compileFrcUserProgramDebugExecutableFrcUserProgramCpp.
+compiling Robot.cpp successful.
+C:\Users\1828 BoxerBots\Desktop\KurganSampleRoboted\src\main\cpp\Robot.cpp: In constructor 'Robot::Robot()':
+C:\Users\1828 BoxerBots\Desktop\KurganSampleRoboted\src\main\cpp\Robot.cpp:17:14: warning: 'frc::SampleRobot::SampleRobot()' is deprecated: WARNING: While it may look like a good choice to use for your code if you're inexperienced, don't. Unless you know what you are doing, complex code will be much more difficult under this system. Use TimedRobot or Command-Based instead. [-Wdeprecated-declarations]
+ Robot::Robot() {
+              ^
+In file included from C:\Users\1828 BoxerBots\Desktop\KurganSampleRoboted\src\main\include/Robot.h:14:0,
+                 from C:\Users\1828 BoxerBots\Desktop\KurganSampleRoboted\src\main\cpp\Robot.cpp:8:
+C:\Users\1828 BoxerBots\Desktop\KurganSampleRoboted\build\tmp\expandedArchives\wpilibc-cpp-2019.4.1-headers.zip_b81507b0c50c581f7502538d67c4b01b/frc/SampleRobot.h:99:3: note: declared here
+   SampleRobot();
+   ^~~~~~~~~~~
+
+Finished compileFrcUserProgramDebugExecutableFrcUserProgramCpp, see full log file:///C:/Users/1828%20BoxerBots/Desktop/KurganSampleRoboted/build/tmp/compileFrcUserProgramDebugExecutableFrcUserProgramCpp/output.txt.
